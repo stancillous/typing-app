@@ -1,6 +1,6 @@
 # typing-app
 
-🚀 Challenge
+
 Add more functionality
 
 Disable the input event listener on completion, and re-enable it when the button is clicked
