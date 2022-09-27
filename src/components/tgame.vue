@@ -25,7 +25,7 @@
                 </div>
                 
                 <div class="input-btn">
-                <input placeholder="Click the button and start typing " type="text" aria-label="current word" id="typed-value" /> <!-- The textbox for typing -->
+                <input type="text" aria-label="current word" id="typed-value" /> <!-- The textbox for typing -->
                 </div>
             </div>
             <button type="button" id="start">Start</button> <!-- To start the game -->
