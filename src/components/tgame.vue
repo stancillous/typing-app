@@ -11,7 +11,7 @@
                 <!-- <h1>kujo typing game!</h1> -->
             </div>
             <div class="p">
-                <p>Practice your typing skills.</p>
+                <p>Test your typing skills :')</p>
 
             </div>
             <div class="type-div">
@@ -25,11 +25,11 @@
                 </div>
                 
                 <div class="input-btn">
-                <input type="text" aria-label="current word" id="typed-value" /> <!-- The textbox for typing -->
+                <input placeholder="Click the button and start typing " type="text" aria-label="current word" id="typed-value" /> <!-- The textbox for typing -->
                 </div>
             </div>
             <button type="button" id="start">Start</button> <!-- To start the game -->
-
+            <a class="V3GB23" target="_blank" href="https://github.com/stancillous/typing-app">built with vue.js</a>
         </main>
     </div>
 </template>
@@ -83,15 +83,18 @@ body{
 //div with the header
 .logo-div-container{
     display: flex;
+    margin-bottom: 5rem;
     align-items: center;
     #app-logo{
-        width: 9rem;
+        width: 7rem;
     }
     a{
         font-weight: $black;
-        font-size: 1.9rem;
-        text-transform: capitalize;
+        font-size: 1.7rem;
+        text-transform: uppercase;
+        padding-left: .4rem;
         color: black;
+        opacity: .9;
         text-decoration: none;
 
     }
@@ -157,13 +160,22 @@ body{
         }
     }
 
+    .V3GB23{
+        color: blue;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-style: italic;
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+    }
 
 
     //THE START BUTTON
     button{
         border-radius: .3rem;
         font-weight: $bold;
-        padding: 1rem 2rem;
+        padding: 1.3rem 4rem;
         font-size: 1.4rem;
         border: none;
         display: block;
@@ -179,6 +191,12 @@ body{
     }
 }
 
+//class to be added to they quote after it is typed
+.finished{
+    opacity: .6;
+}
+
+//classes to be added to the quotes being typed
 .highlight {
     background-color: yellow;
   }
