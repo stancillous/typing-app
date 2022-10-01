@@ -1,8 +1,8 @@
 <template>
     <div>
         <div class="logo-div-container">
-            <img id="app-logo" src="../assets/kb.png" alt="web logo">
-            <a href="">typing game</a>
+            <img id="app-logo" src="../assets/app-logo.png" alt="web logo">
+            <a href="">SuperType</a>
         </div>
 
         <main class="main">
@@ -10,14 +10,28 @@
             <div class="page-title">
                 <!-- <h1>kujo typing game!</h1> -->
             </div>
-            <div class="p">
-                <p>Test your typing skills :')</p>
 
-            </div>
+
+
             <div class="type-div">
+                <div class="custom-options">
+
+                    <div class="custom-options-div">
+                        <button class="custom-options-btn" id="shortQuote">short</button>
+                    </div>
+                    <div class="custom-options-div">
+                        <button class="custom-options-btn active-quote" id="mediumQuote">medium</button>
+                    </div>
+                    <div class="custom-options-div">
+                        <button class="custom-options-btn" id="longQuote">thick</button>
+                    </div>
+
+                </div>
+
                 <div class="quote-div">
                     <!-- <p id="quote">When you have eliminated the impossible, whatever remains, however improbable, must be the truth.</p> -->
-                    <p id="quote"></p> <!-- This will display our quote -->
+                    <p id="quote"></p>  
+
                 </div>
 
                 <div class="message-div">
@@ -29,7 +43,6 @@
                 </div>
             </div>
             <button type="button" id="start">Start</button> <!-- To start the game -->
-            <a class="V3GB23" target="_blank" href="https://github.com/stancillous/typing-app">built with vue.js</a>
         </main>
     </div>
 </template>
@@ -60,6 +73,8 @@ $bold:700;
 $black:900;
 
 
+
+
 *{
     margin: 0;
     padding: 0;
@@ -83,18 +98,19 @@ body{
 //div with the header
 .logo-div-container{
     display: flex;
-    margin-bottom: 5rem;
+    padding-left: 4rem;
+    margin-bottom: 3rem;
     align-items: center;
     #app-logo{
-        width: 7rem;
+        width: 8rem;
     }
     a{
         font-weight: $black;
-        font-size: 1.7rem;
-        text-transform: uppercase;
+        font-size: 1.8rem;
+        // text-transform: uppercase;
         padding-left: .4rem;
         color: black;
-        opacity: .9;
+        opacity: .8;
         text-decoration: none;
 
     }
@@ -122,17 +138,50 @@ body{
         }
     }
 
+
+
     //DIV HOLDING THE CONTENTS TO BE TYPED AND THE INPUT 
     .type-div{
-        background-color: whitesmoke;
         background-color: rgb(185, 203, 240);
         padding:.8rem ;
         margin-top: 2rem;
+        padding-bottom: 5rem;
+
+            //DIV WITH THE CUSTOM OPTIONS
+        .custom-options{
+            // background-color: rgb(179, 202, 224);
+            display: flex;
+            justify-content: space-evenly;
+            justify-content: center;
+            margin-bottom: 4rem;
+            align-items: center;
+            .custom-options-div{
+                button{
+                    background-color: transparent;
+                    color: rgb(51, 48, 48);
+                    color: black;
+                    opacity:.7;
+                    padding: 1rem 2rem;
+                    border: none;
+                    margin: 0 1rem;
+                    border-radius: .3rem;
+                    cursor: pointer;
+                    font-weight: $bold;
+                    font-size: 1.5rem;
+
+                    
+                }
+                .active-quote{
+                    // border: 2px solid;
+                    border-bottom: 1px solid;
+                }
+            }
+        }
 
         .quote-div{
             #quote{
                 font-weight: $medium;
-                font-size: 1.5rem;
+                font-size:1.8rem;
                 margin: 1rem 0;
             }
         }
@@ -172,7 +221,7 @@ body{
 
 
     //THE START BUTTON
-    button{
+    #start{
         border-radius: .3rem;
         font-weight: $bold;
         padding: 1.3rem 4rem;
