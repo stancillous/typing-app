@@ -2,7 +2,7 @@
 ![kb](https://user-images.githubusercontent.com/99094257/192438128-f4839517-b1b2-40e0-a730-82554f7939cd.jpg)
 
 
-### Add more functionality
+<h3>Add more functionality</h3>
 
 Disable the input event listener on completion, and re-enable it when the button is clicked
 
